@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "e-mobiliaria-mobile",
-    "slug": "e-mobiliaria-mobile",
+    "name": "simple-drawer-navigation",
+    "slug": "simple-drawer-navigation",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },

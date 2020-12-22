@@ -7,13 +7,11 @@ import { StatusBar } from 'expo-status-bar';
 
 import Routes from './src/routes';
 
-const App: React.FC = () => {
-  return (
-    <NavigationContainer>
-      <StatusBar style="auto" />
-      <Routes />
-    </NavigationContainer>
-  );
-};
+const App: React.FC = () => (
+  <NavigationContainer>
+    <StatusBar style="auto" />
+    <Routes />
+  </NavigationContainer>
+);
 
 export default App;

@@ -8,35 +8,27 @@ import {
 } from '@react-navigation/drawer';
 
 import Home from '../screens/Home';
-import About from '../screens/About';
-import Cities from '../screens/Cities';
-import Contact from '../screens/Contact';
+import Other from '../screens/Other';
 
 const CustomRoutesContent = (
   props: DrawerContentComponentProps<DrawerContentOptions>,
-) => {
-  return (
-    <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
-    </DrawerContentScrollView>
-  );
-};
+) => (
+  <DrawerContentScrollView {...props}>
+    <DrawerItemList {...props} />
+  </DrawerContentScrollView>
+);
 
 const Drawer = createDrawerNavigator();
 
-const Routes: React.FC = () => {
-  return (
-    <Drawer.Navigator
-      backBehavior="history"
-      initialRouteName="Home"
-      drawerContent={props => <CustomRoutesContent {...props} />}
-    >
-      <Drawer.Screen name="Página Principal" component={Home} />
-      <Drawer.Screen name="Cidades" component={Cities} />
-      <Drawer.Screen name="Quem somos" component={About} />
-      <Drawer.Screen name="Entre em contato" component={Contact} />
-    </Drawer.Navigator>
-  );
-};
+const Routes: React.FC = () => (
+  <Drawer.Navigator
+    backBehavior="history"
+    initialRouteName="Home"
+    drawerContent={props => <CustomRoutesContent {...props} />}
+  >
+    <Drawer.Screen name="Home" component={Home} />
+    <Drawer.Screen name="Other" component={Other} />
+  </Drawer.Navigator>
+);
 
 export default Routes;

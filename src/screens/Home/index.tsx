@@ -1,13 +1,10 @@
 import React from 'react';
 
 import HeaderComponent from '../../components/Header';
+import { Props } from '../../Models';
 
-interface Props {
-  navigation: any;
-}
+const First: React.FC<Props> = ({ navigation }) => (
+  <HeaderComponent navigation={navigation} title={'Drawer Navigation'} />
+);
 
-const Home: React.FC<Props> = ({ navigation }) => {
-  return <HeaderComponent navigation={navigation} title={'E-MOBILIÁRIA'} />;
-};
-
-export default Home;
+export default First;
